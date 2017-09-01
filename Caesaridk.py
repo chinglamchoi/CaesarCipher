@@ -1,5 +1,6 @@
+#Python 3 syntax
 key = int(input("Please input a key: "))
-msg = input("Please input a message to encrypt: ")
+msg = input("Please input a message to encrypt in BLOCK LETTERS: ")
 count = 0
 a = [ord(c) for c in msg]
 for b in a: #a times
@@ -10,9 +11,9 @@ for b in a: #a times
 
 
 key = int(input("Please input a key: "))
-msg = input("Please input a message to decrypt: ")
+msg = input("Please input a message to decrypt in BLOCK LETTERS: ")
 count = 0
 a = [ord(c) for c in msg]
-for b in a: #a times
+for b in a: 
     print(chr((a[count] - key - 65) % 26 + 65))
     count = count + 1
